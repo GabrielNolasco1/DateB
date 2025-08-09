@@ -1,0 +1,21 @@
+{
+  "name": "minha-biblioteca",
+  "version": "1.0.0",
+  "description": "Uma biblioteca incrível feita em TypeScript",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["typescript", "library", "npm"],
+  "author": "Gabriel Nolasco",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
+}
